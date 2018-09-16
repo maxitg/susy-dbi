@@ -42,8 +42,13 @@
 \def\vp{\phi}
 \def\k{ \sqrt{ \gamma + \delta \cos (\alpha a/2f)}}
 \def\kk{ \gamma + \delta \cos (\alpha a/2f)}
-
 \def\F{{\cal F}} 
+
+\newcommand{\pn}[1]{{\color{red}{#1}}}
+\newcommand{\xx}[1]{{\color{RubineRed}{#1}}}
+\newcommand{\mx}[1]{{\color{blue}{#1}}}
+\newcommand{\suj}[1]{{\color{OliveGreen}{{\bf[}#1{\bf]}}}}
+
 
 \title{\boldmath Supersymmetric Dirac-Born-Infeld Axionic Inflation and Non-Gaussianity}
 \author{Pran Nath}
@@ -52,6 +57,8 @@
 % e-mail addresses: one for each author, in the same order as the authors
 \emailAdd{p.nath@northeastern.edu}
 \emailAdd{m.piskunov@northeastern.edu}
+
+ %\cite{Ade:2015ava}
 
 \abstract{
   An analysis is given of inflation based on a supersymmetric Dirac-Born-Infeld (DBI) action in
@@ -76,7 +83,7 @@
 \begin{document} 
 \maketitle
 \flushbottom
-\fbox{{\today}}
+%\fbox{{\today}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
@@ -105,7 +112,7 @@
   spectral indices as well as the ratio of the tensor to the scalar power spectrum consistent with the Planck data~\cite{Adam:2015rua,Ade:2015lrj,Array:2015xqh}.
   Another quantity of interest in primordial perturbations is the so-called non-Gaussianity~\cite{Maldacena:2002vr,Seery:2005wm,Seery:2005gb,Chen:2005fe,Chen:2006nt,Lyth:2005fi}. It is known that models
   with canonical kinetic energy do not lead to non-Gaussianity and for non-Gaussianity one needs models
-  with non-canonical kinetic energy. In this context the Dirac-Born-Infeld (DBI) models are of interest (see, e.g.,~\cite{Alishahiha:2004eh,Easson:2007dh,Huang:2007hh,Gordon:2000hv,Langlois:2008wt}) which is the subject of interest in this work.
+  with non-canonical kinetic energy. In this context the Dirac-Born-Infeld (DBI) models are of interest (see, e.g.,~\cite{Alishahiha:2004eh,Easson:2007dh,Huang:2007hh,Gordon:2000hv,Langlois:2008wt}) which is the object of study in this work.
   Our work is focused on using shift symmetry and axions for inflation. For a partial list of other works where
   shift symmetry of axions is utilized in inflation
   see~\cite{ArkaniHamed:2003mz,Kaplan:2003aj,Green:2009ds,Higaki:2014pja,Higaki:2014mwa,Kadota:2016jlw,Kobayashi:2016vcx}
@@ -115,18 +122,19 @@
 
   The outline of the rest of the paper is as follows: In section \ref{sec2} we
   give a summary of previous results on the decomposition of a landscape of axion fields which undergo shifts
-  under a $U(1)$ global transfomation into fast-roll and slow-roll parts.
+  under a $U(1)$ global transformation into fast-roll and slow-roll parts.
   This is one of the central elements in the
   analysis of the inflationary models we discuss later.
   In section \ref{sec3} we give a description of the supersymmetric DBI Lagrangian
   in superspace for the case of two chiral fields $\Phi_1$ and $\Phi_2$ which are oppositely charged under a $U(1)$ global symmetry.
-  We then display the bosonic part of the Lagrangian after integration over the Grasmann co-ordinates.
+  We then display the bosonic part of the Lagrangian after integration over the Grassmann co-ordinates.
   Here it is shown that the Lagrangian depends on the dimensionless parameters $\alpha_1, \alpha_2, \alpha_3$; and $T$
   which has the dimension of the fourth power of mass. The general case including $\alpha_1, \alpha_2, \alpha_3$
   is too complicated to discuss analytically and thus here the analysis is given taking into account only the $\alpha_1$ terms.
   In section \ref{sec4} we discuss the pressure, density and the inflation equations for a generic DBI model. In section \ref{sec5} we
   discuss the slow-roll parameters, non-Gaussianity, and the speed of sound which enters in defining non-Gaussianity.
-  Experimental test of the two field DBI model is discussed in section \ref{sec6}, and conclusions are given in section \ref{sec7}.
+  Model simulations and 
+  experimental test of the two field DBI model is discussed in section \ref{sec6}, and conclusions are given in section \ref{sec7}.
   Further, details of the analysis are given in sections \ref{appenA}, \ref{appenB}, and \ref{appenC}.
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -249,8 +257,10 @@
     \Big) / T^2.
     \label{Lag.22}
   \end{align}
+  \pn{where the supercovariant derivatives $D^\alpha \Phi$ etc are defined in an explicit manner in section 8.}  
   We note that the Lagrangian of Eq.~(\ref{Lag.11}) is a direct generalization of the Lagrangian for the single field
-  case (see section \ref{appenA}) which can be derived from a more basic 3-brane action (see, e.g., \cite{Sasaki:2012ka} and the references
+  case (see section \ref{appenA}) which can be derived from a more basic 3-brane action 
+  (see, e.g., \cite{Rocek:1997hi,Tseytlin:1999dj,Sasaki:2012ka} and the references
   therein). Here we simply extend the analysis to two fields
   in the most general supersymmetric form involving four covariant derivatives. In writing Eq.~(\ref{Lag.11}) we imposed
   an additional constraint which is invariance under $\Phi_1$ and $\Phi_2$ interchange.
@@ -280,11 +290,11 @@
     W_{sb}=\sum_{k=1}^m\left(A_{1, k}\Phi_1^k+A_{2, k}\Phi_2^k\right).
     \label{w3}
   \end{equation}
-  We note in passing that the superpotential of the type Eqs. (\ref{w1})-(\ref{w3}) was considered in \cite{Halverson:2017deq}.
-  Integration over $\theta's$ gives
+  We note in passing that the superpotential of the type Eqs. (\ref{w1})-(\ref{w3}) was considered in \cite{Nath:2017ihp,Halverson:2017deq}.
+  Integration over $\theta's$ gives for the full Lagrangian
   \begin{align}
     \mathcal{L}
-      &= \int d^2 \theta \mathcal{L}_D + \int d^2\theta \mathcal{L}_F = \mathcal{L}_I + \mathcal{L}_{II},\non
+      &=   \mathcal{L}_D +  \mathcal{L}_F= \mathcal{L}_I + \mathcal{L}_{II},\non
     \mathcal{L}_I &= T - T \sqrt{(1+A)^2 - B},\non
     \mathcal{L}_{II}& = F_1 F^*_1 + F_2 F^*_2
       + G(\phi) \Big[ \alpha_1(-2 F_1 F^*_1 \partial_a\phi_1 \partial^a \phi^*_1
@@ -300,6 +310,12 @@
       + \left(\frac{\partial W}{\partial \phi_1}F_1+ \frac{\partial W}{\partial \phi_2}F_2 + h.c.\right).
     \label{Lag.23}
   \end{align}
+  \pn{where $\frac{\partial W}{\partial \phi_k}$ (k=1,2) are given by 
+  \begin{align}
+   \frac{\partial W}{\partial \phi_1}= \mu \phi_2 + \lambda (\phi_1\phi_2) \phi_2 +\sum_{k=1}^m k A_{1,k} \phi_1^{k-1}\,,\nonumber\\
+   \frac{\partial W}{\partial \phi_2}= \mu \phi_1 + \lambda (\phi_1\phi_2) \phi_1 +\sum_{k=1}^m k A_{1,k} \phi_2^{k-1}\,,  \nonumber
+  \end{align}
+}
   There are four auxiliary fields in Eq.~(\ref{Lag.23}) which are $F_1, F^*_1, F_2, F^*_2$. The field equations obtained by varying
   $F_1, F^*_1, F_2, F^*_2$ are given in section \ref{appenB}. These are coupled equations
   involving all the $F$'s and $F^*$'s
@@ -361,6 +377,27 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
   \begin{equation} \label{DisplayFormulaNumbered:eq.twoDBI.stabilization.2}
     \mu f_1 + \frac{1}{2} \lambda f_1^2 f_2+\sum_{k=1}^m \frac{1}{2^{k/2-1}} k A_{2, k}f_2^{k-1}=0.
   \end{equation}
+  \pn{Eqs.(\ref{DisplayFormulaNumbered:eq.twoDBI.stabilization.1}) and 
+  (\ref{DisplayFormulaNumbered:eq.twoDBI.stabilization.2})    
+  provide the stability conditions  for the radial modes $\rho_1$ and $\rho_2$. 
+  Here the first two terms on the left hand side of each of the above equations arise from $W_s$ while the last term involving
+  the sum arises from $W_{sb}$. 
+  For arbitrary $m$ these equations cannot be solved in a closed form. However, we can solve for $f_i$ in a perturbative
+  expansion where we treat the contribution arising from $W_{sb}$ as the perturbation. A significant simplicity results if we
+  assume $A_k\equiv= A_{1,k}=A_{2,k}$. In this case $f\equiv f_1=f_2$ and   we find that 
+%  \begin{align}
+%  f\equiv f_1=f_2= -\frac{2\mu}{\lambda}  - \sum_k \sum_{k=1}^m \frac{1}{2^{k/2-1}} k A_{k}  (\frac{-2\mu}{\lambda})^{k-1}
+%  /\left[1+\frac{3}{2}(\frac{-2\mu}{\lambda}\right]  +\cdots
+%  \end{align}
+    \begin{align}
+  f&= f_0 - \frac{2}{3\lambda} \sum_{k} \frac{kA_k}{2^{k/2-1} } f_0^{k-3} + \cdots  \nonumber\\
+  f_0&\equiv \pm \sqrt{\frac{-2\mu}{\lambda}}\,.
+  \end{align}
+  Eq. (3.22) exhibits the value of the stability point  $f$ of the radial modes in terms of the input parameters of the superpotential
+  including $W_s$ and $W_{sb}$. 
+  }
+  
+  
   For the case of two fields, we have $F_1$ and $F_2$, which can be solved using Eq.~(\ref{auxsolution}).
   For our choice of $W$, we can evaluate $p_k$ and $q_k$ (k=1,2) explicitly so that we have
   \begin{equation} \label{DisplayFormulaNumbered:eq.twoDBI.p.1}
@@ -394,7 +431,25 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
     a_-/f_-={\frac{1}{\sqrt 2}}\left(a_1/f_1-a_2/f_2\right).
   \end{align}
   Here $a_+$ is the field that  is invariant under the shift symmetry and  undergoes fast roll and $a_-$ is the field that is sensitive to the shift symmetry and undergoes slow roll. We are interested in only the slow-roll part
-  and thus we suppress $a_+$ and retain only the $a_-$ part in the potential. \\
+  and thus we suppress $a_+$ and retain only the $a_-$ part in the potential. 
+  \pn{This topic was dealt with in great detail in \cite{Nath:2017ihp}. Here the more general case of $m$ pairs of axion fields
+  with each pair having fields with opposite $U(1)$ charges was considered.  In this case one has $2m$ number of axionic fields.
+  After spontaneous symmetry breaking using the superpotential $W=W_s$ the potential involving the $2m$ axion 
+  fields was computed and is exhibited in Eqs.(2.11) and (2.12) of  \cite{Nath:2017ihp}.  This allows us to compute the 
+  mass matrix for the $2m$ axion fields which is shown in Eqs. (2.13)-(2.14) of  \cite{Nath:2017ihp}. Here one finds that $2m-1$ 
+  linear combinations of   axion fields gain mass and one can see that the masses of the axions are scaled by $\mu_{kl}$ which can be taken to the 
+  GUT scale. These $2m-1$ linear combinations of axion fields are invariant under the $U(1)$ global symmetry. The remaining one 
+  linear combination of axion fields is corresponds to the pseudo-Nambu-Goldstone bosons (pNGB)  and is massless. On including $W_{sb}$ in
+   spontaneous breaking, the pNGB also gains a mass. However, this mass is much smaller than those of the other $2m-1$ axions 
+   because $|W_{sb}| << |W_s|$. In the analysis of this there is just one pair of axion field so we have only $a_+$ and $a_-$ 
+   where $a_+$ is the axion field invariant under the $U(1)$ global symmetry and $a_-$ is the field which is the pNGB.  
+   In  \cite{Nath:2017ihp} it was shown that   $a_+$ rolls an order of magnitude or more  faster than $a_-$ as shown by blue lines (fast roll) vs red lines (slow roll) in Fig.1 and Fig.2 of  \cite{Nath:2017ihp}.  This phenomenon also holds for the current analysis presented here.
+    }
+  
+  
+  
+  
+  
   To simplify the analysis we  set $A_{1,k} = A_{2,k} = A_k$ and set $f_1 = f_2 = f_+ = f_- = f$.
   In this case we have neglected spatial gradients:
   \begin{align}
@@ -422,17 +477,21 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
   where
   \begin{equation}
     \mathcal{T}=\frac{1}{2} \left(1+\sqrt{1-\frac{{\dot{a}}_{-}^2}{T}+\frac{\left(2-\alpha_1\right){\dot{a}}_{-}^4}{8 T^2}}\right),
+    \label{lag12a}
   \end{equation}
   \begin{equation}
-    k=\beta \sqrt{\sum_{m, n}m n G_mG_n \left(1-\cos\left(\frac{a_- m}{\sqrt 2 f}\right)-\cos\left(\frac{a_- n}{\sqrt 2 f}\right)+\cos\left(\frac{a_- \left(m-n\right)}{\sqrt 2 f}\right)\right)},
+    k=\tilde\beta \sqrt{\sum_{m, n}m n {\cal{G}}_m {\cal {G}}_n \left(1-\cos\left(\frac{a_- m}{\sqrt 2 f}\right)-\cos\left(\frac{a_- n}{\sqrt 2 f}\right)+\cos\left(\frac{a_- \left(m-n\right)}{\sqrt 2 f}\right)\right)},
+    \label{lag12b}
   \end{equation}
   \begin{equation}
     \mathcal{F}_{\pm} = \pm \left(\mp\frac{1}{2\alpha_1}k \left(\mathcal{T}-\frac{{\dot{a}}_{-}^2}{4 T}\right) + \sqrt{ \frac{1}{4\alpha_1^2} k^2 \left(\mathcal{T}-\frac{{\dot{a}}_{-}^2}{4 T}\right)^2+\frac{1}{27\alpha_1^3}{\left(\mathcal{T}+\left(\alpha_1-1\right)\frac{{\dot{a}}_{-}^2}{4 T}\right)}^3}\right)^{1/3},
+    \label{lag12c}
   \end{equation}
   \begin{equation}
-    G_k = \frac{A_k 2^{1/2 (1 - k)}}{\beta \sqrt T f^{1-k}}\,.
+    {\cal{G}}_k = \frac{A_k 2^{1/2 (1 - k)}}{\tilde \beta \sqrt T f^{1-k}}\,.
+    \label{lag12d}
   \end{equation}
-  Here $\beta$ is an arbitrary dimensionless parameter which we choose such that $G_k \sim 1$, and which determines the scale of symmetry breaking terms relative to $T$.
+  Here $\tilde \beta$ is an arbitrary dimensionless parameter which we choose such that ${\cal{G}}_k \sim 1$, and which determines the scale of symmetry breaking terms relative to $T$.
   
  %}
 
@@ -503,7 +562,8 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
   \begin{align}
     L= -\frac{1}{2} \partial_\mu a_{-}\partial a_{-}^{\mu} - V(a_-)
   \end{align}
-  the above equations reduce to the following
+  Eqs. (\ref{inf-1a}) and  (\ref{inf-2a}) 
+   reduce to the following
   \begin{align}
     3 M_\text{P}^2 \frac{\dot R^2}{R^2} = \frac{1}{2} \dot a_{-}^2 + V(a_-)\,,\non
     \ddot a_{-} + 3 H \dot a_{-} + V'(a_{-})=0\,,
@@ -606,10 +666,17 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
     \left< \zeta(\vec k_1) \zeta(\vec k_2) \zeta(\vec k_3) \right> = (2\pi)^7 \delta^3(\vec k_1+ \vec k_2+ \vec k_3) \frac{\sum_i k_i^3}{\prod_i k_i^3}
     \left[ -\frac{3}{10} f_{NL} (P_k^{\zeta})^2 \right],
   \end{align}
-  where $P_k^{\zeta}$ is the scalar power spectrum and $f_{NL}$ is a measure of non-Gaussianity. For the specific case of equilateral triangle
-  when $k_1=k_2=k_3$, $f_{NL}$ is given by~\cite{Chen:2006nt}
+  where $P_k^{\zeta}$ is the scalar power spectrum and $\pn{f_{NL}}$ is a measure of non-Gaussianity. 
+  \pn{Non-Gaussianity depends strongly on  shape and various types of shapes have been discussed in the 
+literature which include local, equilibrium and orthogonal ~\cite{Ade:2015ava} (For earlier analyses see 
+\cite{Komatsu:2001rj,Komatsu:2003fd,Verde:1999ij}).
+ The non-Gaussianity  we will discuss here is the one which has the shape of an equilateral triangle, 
+ % of Eq. (\ref{equil}) is referred to in the
+%literature as the equilibrium one which is indicated at the superscript ``equil''.}
+  when $k_1=k_2=k_3$ and  is given by~\cite{Chen:2006nt}}
   \begin{align}
-    f_{NL}= \frac{35}{108}\left(\frac{1}{c_s^2}-1\right) - \frac{5}{81} \left[ \left(\frac{1}{c_s^2} -1- 2\frac{z_2}{z_1}\right) + (3-2 {c}_1)z \frac{z_2}{z_1}\right] + {\cal O}(\epsilon).
+   \pn{f^{equil}_{NL}}= \frac{35}{108}\left(\frac{1}{c_s^2}-1\right) - \frac{5}{81} \left[ \left(\frac{1}{c_s^2} -1- 2\frac{z_2}{z_1}\right) + (3-2 {c}_1)z \frac{z_2}{z_1}\right] + {\cal O}(\epsilon).
+    \label{equil}
   \end{align}
   where
   \begin{align}
@@ -617,6 +684,21 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
     z_2= \beta^2 L_{,\beta \beta} + \frac{2}{3} \beta^3 L_{,\beta\beta\beta}\,,~~
     z= \frac{\dot z_2}{z_2 H}\,.
   \end{align}
+ \pn{where the superscript ``equal''  on $f_{NL}$ indicates that we are specifically considering the shape to be of an equilateral 
+ triangle. }
+  
+  
+%\pn{
+%Non-Gaussianity depends strongly on the shape and various types of shapes have been discussed in the 
+%literature which include local, equilibrium and orthogonal ~\cite{Ade:2015ava} (For earlier analyses see 
+%\cite{Komatsu:2001rj,Komatsu:2003fd,Verde:1999ij}).
+% The non-Gaussianity of Eq. (\ref{equil}) is referred to in the
+%literature as the equilibrium one which is indicated at the superscript ``equil''.}
+
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Model simulation and experimental test \label{sec6}}
@@ -625,14 +707,22 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
     \centering
     \includegraphics[width=1.0\textwidth]{figs/fig1.pdf}
     \caption{
-      Left panel: A plot of the ratio $r$ of the tensor to scalar power spectrum vs the scalar spectral index $n_s$
-      for the two field DBI model when $\alpha_1$ is allowed to vary, when $\alpha_2 = \alpha_3 = 0$. The plot shows that $89\%$ of simulated points are consistent with Planck constraints as shown in blue. Right panel: A plot of non-Gaussianity parameter $f_{NL}$ as
-      a function of $\alpha_1$ for the same data set as in the left plot. The green dots are parameter points which satisfy the Planck constraints
-      on $r$ and $n_s$ and lie in the blue region 
-      and the red dots are parameter points which are outside the experimentally allowed region. Black line corresponds to the 
- lower limit $f_{NL} =5$ of the 
-        projected value for observation in future experiments for non-Gaussianity.
-           The points that lie above the black line give non-Gaussianity $f_\text{NL} > 5$ which, however, are not consistent with Eq.~(\ref{data}).
+      Left panel: A plot of the ratio $r$ of the tensor to scalar power spectrum vs the scalar spectral index $n_s$ 
+      for the two field DBI model when $\alpha_1$ is allowed to vary, when $\alpha_2 = \alpha_3 = 0$. 
+      The blue region enclosed by the blue line is the one allowed by experiment in the 2? range.      
+            All the scatter points have pivot number of e-foldings in the range [50, 60].          
+         $89\%$ of the simulated points 
+      are consistent with Planck constraints as shown by green points while the red points lie outside the 68\% CL contour.
+            Right panel: A plot of non-Gaussianity parameter $\pn{f^{equil}_{NL}}$ as
+      a function of $\alpha_1$ for the same data set as in the left plot.  As in the left panel
+      the green dots are parameter points which satisfy the Planck constraints
+      on $r$ and $n_s$ and lie in the blue region  
+      and the red dots are parameter points which are outside the experimentally allowed region  on $r$ and $n_s$. 
+      %The horizontal black line is the
+ %lower limit $\pn{f^{equil}_{NL}} =5$ of the 
+    %    projected value for observation in future experiments for non-Gaussianity.
+    %       The points that lie above the black line give non-Gaussianity $f_\text{NL} > 5$ which, however, are not consistent with Eq.~(\ref{data}).
+  \pn{Max: We need to remove the horizontal black line.}  
     }
     \label{fig1}
   \end{figure}
@@ -642,7 +732,7 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
     \includegraphics[width=1.0\textwidth]{figs/fig2.pdf}
     \caption{Left panel: A plot of the ratio $n_s$ vs $N_{\rm pivot}$ in the range $50-60$ for the same data set as in Fig.~(\ref{fig1}).
     The plot shows a mild dependence of $n_s$ on $N_{\rm pivot}$ in the range indicated. Right panel: The same as the left panel except
-    $f_{NL}$ is plotted vs $N_{\rm pivot}$.
+    $\pn{f^{equil}_{NL}}$ is plotted vs $N_{\rm pivot}$.
     The green and red dots are parameter points and have the same meaning as in Fig.~(\ref{fig1}).}
     \label{fig2}
   \end{figure}
@@ -653,17 +743,14 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
   	\caption{The effect of $\alpha_2$ (left panel) and $\alpha_3$ (right panel) on non-Gaussianity for a parameter point 
 	taken from Fig.~(\ref{fig1}) which is consistent with 
 	Planck data and has the  largest non-Gaussianity among the set of parameter points 
-  in Fig.~(\ref{fig1}). Specifically, here $f = 0.429 M_\text{P}$, $a_{-, 0} = 0.233 M_\text{P}$, $\dot a_{-, 0} = -0.118 M_\text{P}^2$, $G_1 = G_2 = G_3 = 0$, $G_4 = 1$, $G_5 = -1.53$, $G_6 = 563$, $\alpha_1 = 1207$, $\beta = 0.802$, $T = M_\text{P}^4$. One 
+  in Fig.~(\ref{fig1}). Specifically, here $f = 0.429 M_\text{P}$, $a_{-, 0} = 0.233 M_\text{P}$, $\dot a_{-, 0} = -0.118 M_\text{P}^2$, ${\cal{G}}_1 = {\cal{G}}_2 = {\cal{G}}_3 = 0$, ${\cal{G}}_4 = 1$, ${\cal{G}}_5 = -1.53$, ${\cal{G}}_6 = 563$, $\alpha_1 = 1207$, $\tilde \beta = 0.802$, $T = M_\text{P}^4$. One 
 	finds that 
 	 the effect is not sufficient to obtain a significantly larger value of $f_\text{NL}$.}
   	\label{fig3}
   \end{figure}
 
 Numerical simulations performed consist of two parts: a large $0.5 \times 10^6$ points simulation in which $\alpha_2 = \alpha_3 = 0$, and a small simulation with $\alpha_2$ and $\alpha_3$ perturbed around an experimentally consistent point with the largest non-Gaussianity from the first simulation.
-
-  
-  
-  The evolution of the inflaton field $a_-$ in the large simulation Figs.~(\ref{fig1}) and (\ref{fig2}) is obtained by taking the effective axion Lagrangian Eqs.~(\ref{eq.axionLagrangian.I}) and (\ref{eq.axionLagrangian.II}), deriving Euler-Lagrange equation and Friedmann Eq.~(\ref{fried2}) using computer algebra, and solving them numerically. The integration is stopped when the ratio of the time derivative ($\dot n\left(t\right)$) of the e-foldings count to its time-average ($n\left(t\right) / t$) passes a threshold. Specifically,
+  The evolution of the inflaton field $a_-$ in the large simulation of Figs.~(\ref{fig1}) and (\ref{fig2}) is obtained by taking the effective axion Lagrangian Eqs.~(\ref{eq.axionLagrangian.I}) and (\ref{eq.axionLagrangian.II}), deriving Euler-Lagrange equation and Friedmann Eq.~(\ref{fried2}) using computer algebra, and solving them numerically. The integration is stopped when the ratio of the time derivative ($\dot n\left(t\right)$) of the e-foldings count to its time-average ($n\left(t\right) / t$) passes a threshold. Specifically,
   \begin{equation} 
   	\frac{\dot n \left(t\right)}{n\left(t\right) / t} < \theta_n,
   \end{equation} 
@@ -699,14 +786,22 @@ Numerical simulations performed consist of two parts: a large $0.5 \times 10^6$ 
   where $r$ was extremely small, here $r$ has significantly
   larger values. Thus the largeness of $r$ discriminates this class of supersymmetric DBI models from the models
   of \cite{Nath:2017ihp}.
-  The right panel of Fig. (\ref{fig1}) gives a plot of $f_{NL}$ vs $\alpha_1$. We see a significant sensitivity
-  of $f_{NL}$ to $\alpha_1$. However, overall $f_{NL}$ is typically small and mostly lies below 0.5. The effect of $\alpha_2$ and $\alpha_3$ for the point from Fig.~\ref{fig1} with largest non-Gaussianity is shown on Fig.~\ref{fig3}. One can see that although non-Gaussianity $f_\text{NL}$ is sensitive to $\alpha_2$ and $\alpha_3$, it still lies below 0.5. This level
-  of non-Gaussianity appears too low for observation in the near future. The analysis of~\cite{Komatsu:2001rj,Komatsu:2003fd,Verde:1999ij}
-  indicates that non-Gaussianity can be tested in data in future experiments provided $|f_{NL}|> 5$ and the $f_{NL}$
-  given by the right panel of Fig. (\ref{fig1}) lies significantly below that. In the analysis we allow a corridor of $[50,60]$
-  e-foldings and it is of interest to ask the dependence of $n_s$ and $f_{NL}$ on this number. In the left panel of Fig. (\ref{fig2})
+  The right panel of Fig. (\ref{fig1}) gives a plot of $\pn{f^{equil}_{NL}}$ vs $\alpha_1$. We see a significant sensitivity
+  of $\pn{f^{equil}_{NL}}$ to $\alpha_1$. However, overall $\pn{f^{equil}_{NL}}$ is typically small and mostly lies below 0.5. The effect of $\alpha_2$ and $\alpha_3$ for the point from Fig.~\ref{fig1} with largest non-Gaussianity is shown on Fig.~\ref{fig3}. One can see that although non-Gaussianity $f_\text{NL}$ is sensitive to $\alpha_2$ and $\alpha_3$, it still lies below 0.5. This level
+  of non-Gaussianity appears too low for observation in the near future. 
+  
+  \pn{The most recent analyses of non-Gaussianity based on Planck data are given in ~\cite{Ade:2015ava}. 
+  Here the analysis is done using cosmic microwave background (CMB) temperature and E-mode polarization 
+  data. The  analysis using 
+  temperature alone give $f^{equil} = -16 \pm 70$ (68 \% CL, statistical) and an analysis combining temperature and polarization data 
+  gives $f^{equil} = -4 \pm 43$ (68 \% CL, statistical).}  
+%  The analysis of~\cite{Komatsu:2001rj,Komatsu:2003fd,Verde:1999ij}
+%  indicates that non-Gaussianity can be tested in data in future experiments provided $|\pn{f^{equil}_{NL}}|> 5$ and the $\pn{f^{equil}_{NL}}$
+%  given by the right panel of Fig. (\ref{fig1}) lies significantly below that. In the analysis we allow a corridor of $[50,60]$
+%  e-foldings and it is of interest to ask the dependence of $n_s$ and $\pn{f^{equil}_{NL}}$ on this number.
+    In the left panel of Fig. (\ref{fig2})
   a plot of $n_s$ vs $N_{\rm pivot}$ is given. Here one finds that $n_s$ has a mild positive slope as a function of $N_{\rm pivot}$.
-  The right panel gives a plot of $f_{NL}$ on $N_{\rm pivot}$. Here one finds the $f_{NL}$ has a relatively small variation in the range $[50,60]$ for
+  The right panel gives a plot of $\pn{f^{equil}_{NL}}$ on $N_{\rm pivot}$. Here one finds the $\pn{f^{equil}_{NL}}$ has a relatively small variation in the range $[50,60]$ for
   $N_{\rm pivot}$. In either case one cannot draw any significant conclusion regarding the dependence of these parameters
   on the number of e-foldings as long as one is in the $N_{\rm pivot}$ range of $[50,60]$.
 
@@ -720,7 +815,8 @@ Numerical simulations performed consist of two parts: a large $0.5 \times 10^6$ 
 	in the superpotential. The analysis is done
 	in the vacuum state with stabilized saxions and the scalar potential can be decomposed into a fast-roll and a slow-roll
 	part where the slow-roll part of the potential is now velocity dependent. This velocity dependence is a direct consequence of the
-	DBI form of the action. In the analysis we have obtained an explicit form for the auxiliary fields $F_k$ which satisfy a cubic equation
+	DBI form of the action. In the analysis for the case $\alpha_2=0=\alpha_3$
+	 we have obtained an explicit form for the auxiliary fields $F_k$ which satisfy a cubic equation
 	in terms of the inflation field. We have analyzed the scalar and tensor power spectrum and computed the spectral indices.
 	It is shown that a significant part of the parameter space exists which supports inflation consistent with the current experimental
 	constraints on the ratio of the tensor to the scalar power spectrum and the spectral indices. A remarkable aspect of the
@@ -728,7 +824,9 @@ Numerical simulations performed consist of two parts: a large $0.5 \times 10^6$ 
 	and consequently also a significant value for the spectral index $n_t$. This is in contrast to a supersymmetric non-DBI model
 	which typically has a suppressed value of $r$ and of $n_t$. An analysis of non-Gaussianity in the model was also carried out.
 	It is found that for the model parameters that support inflation consistent with the Planck experimental values on $r$ and
-	$n_s$, the non-Gaussianity is typically small. It is of interest to achieve this class of models in string theory using
+	$n_s$, the non-Gaussianity is typically small. This holds true even when the parameters $\alpha_2$ and $\alpha_3$ along with
+	$\alpha_1$ are included in the analysis.
+		It is of interest to achieve this class of models in string theory using
 	moduli stabilization of the type used in KKLT~\cite{Kachru:2003aw}
 	or the Large Volume Scenario~\cite{Balasubramanian:2005zx}.
 
@@ -740,7 +838,7 @@ Numerical simulations performed consist of two parts: a large $0.5 \times 10^6$ 
 \section{Appendix A: Single field supersymmetric DBI Lagrangian \label{appenA}}
 
 	To define notation and to discuss the technique used in the analysis of this work we consider the case here of a single
-	superfield. Thus we consider a supersymmetric DBI Lagrangian of the form
+	superfield. Thus we consider a supersymmetric DBI Lagrangian of the form~\cite{Rocek:1997hi,Tseytlin:1999dj,Sasaki:2012ka}	
 	\begin{equation}\label{DisplayFormulaNumbered:eq.dbiSuperLagrangian}
 		\mathcal{L}_{DBI}=\int d^4\theta \left(\Phi \Phi^\dagger+\frac{1}{16}\left(D^\alpha \Phi D_\alpha \Phi \right)\left({\bar{D}}^{\dot{\alpha}}\Phi^\dagger {\bar{D}}_{\dot{\alpha}}\Phi^\dagger \right)G\left(\Phi \right)\right),
 	\end{equation}
@@ -950,7 +1048,9 @@ Numerical simulations performed consist of two parts: a large $0.5 \times 10^6$ 
   \begin{equation}
     Q_\pm = \left(-\frac{1}{T^{1/2}}\sqrt{\frac{1}{4}\frac{\partial W^*}{\partial \phi^*}}\pm\sqrt{\frac{1}{27}{\left(\frac{\partial W}{\partial \phi}\right)}^{-1}+\frac{1}{4T}\frac{\partial W^*}{\partial \phi^*}}\right)^{1/3}.
   \end{equation}
-	We can expand $F$ in powers of $1/T$ and this expansion is exhibited in Eq.~(\ref{fexpand}). Similarly we can expand $V$ in powers of $1/T$ and this
+	We can expand $F$ given by  Eq.(\ref{DisplayFormulaNumbered:eq.dbiPotentialF}) 	
+in powers of $1/T$ and this expansion is exhibited in Eq.~(\ref{fexpand}). Similarly we can expand $V$ given by 
+Eq.(\ref{DisplayFormulaNumbered:eq.dbiPotentialWithF})  in powers of $1/T$ and this
 	expansion is given in Eq.~(\ref{vexpand}).
 	One can see that the lowest terms in the expansion for both $F$ and $V$ give the standard result.
 
@@ -1633,6 +1733,17 @@ V. F. Mukhanov and G. V. Chibisov, Pis?a Zh. Eksp. Teor. Fiz. 33, 549 (1981) [JE
 %\bibitem{}
 %	*** Non-standard form, no INSPIRE lookup performed ***
 
+
+ %\cite{Ade:2015ava}
+\bibitem{Ade:2015ava} 
+  P.~A.~R.~Ade {\it et al.} [Planck Collaboration],
+  %``Planck 2015 results. XVII. Constraints on primordial non-Gaussianity,''
+  Astron.\ Astrophys.\  {\bf 594}, A17 (2016)
+  doi:10.1051/0004-6361/201525836
+  [arXiv:1502.01592 [astro-ph.CO]].
+  %%CITATION = doi:10.1051/0004-6361/201525836;%%
+  %514 citations counted in INSPIRE as of 07 Sep 2018
+%
 %\cite{Komatsu:2001rj}
 \bibitem{Komatsu:2001rj} 
   E.~Komatsu and D.~N.~Spergel,
