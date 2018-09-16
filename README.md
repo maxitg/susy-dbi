@@ -1,5 +1,4 @@
-# susy-dbi
-Paper: Supersymmetric Dirac-Born-Infeld Axionic Inflation and Non-Gaussianity
+# Supersymmetric Dirac-Born-Infeld Axionic Inflation and Non-Gaussianity
 
 An analysis is given of inflation based on a supersymmetric Dirac-Born-Infeld (DBI) action in an
 axionic landscape. The DBI model we discuss involves a landscape of chiral superfields with one
