@@ -1,27 +1,15 @@
-\documentclass[a4paper,11pt]{article}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\def\non{\nonumber\\}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pdfoutput=1 % if your are submitting a pdflatex (i.e. if you have
-             % images in pdf, png or jpg format)
+\documentclass[12pt]{article}
 
-\usepackage{jheppub} % for details on the use of the package, please
-                     % see the JHEP-author-manual
-
-\usepackage[T1]{fontenc} % if needed
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\rr}[1]{{\color{red}{#1}}}
-\newcommand{\bl}[1]{{\color{blue}{#1}}}
-\newcommand{\gr}[1]{{\color{green}{#1}}}
-\newcommand{\brown}[1]{{\color{brown}{#1}}}
-\definecolor{orange}{rgb}{1,0.5,0}
-\definecolor{green}{rgb}{0.2,0.5,0.2}
-\newcommand{\maxdelete}[1]{{\color{orange}{#1}}}
-\newcommand{\maxadd}[1]{{\color{green}{#1}}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% Math Related Packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{bbm}
+%\usepackage{cancel}
+%\usepackage{mathtools}
+\usepackage{slashed}
+\usepackage[numbers,sort&compress]{natbib}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{hyperref}
 %%%%
 \usepackage{cleveref}
@@ -30,30 +18,120 @@
 \crefname{table}{Table}{Tables}
 \crefname{section}{Section}{Sections}
 \newcommand{\crefrangeconjunction}{--}
-%%%%%%%%%%%%%%%%%%%%
+%%%
+
+
+\def\non{\nonumber\\}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Formatting Related Packages
+\usepackage[letterpaper,margin=1in,bottom=1in]{geometry}
+\usepackage{float} % allows forcing plot and table locations with [H]
+\usepackage{parskip} % skip spaces between paragraphs
+\usepackage{tabulary} % table environment with auto word wrapping
+\usepackage{color} % color for tracking edits
+\usepackage{soul} % strikeout for tracking edits
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage[section]{placeins} % keep figures inside their sections
+
+\def\lhc2{LHC~Run~II}
+\def\nsu{nonuniversal~supergravity~models~}
+\def\dd{$\cdot\cdot$}
+
+% Reference Package
+\usepackage{cleveref}
+
+% Macros
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\GeV}{~\textrm{GeV}}
+
+%\bibliographystyle{suj_long}
+\bibliographystyle{suj}
+
+%%%%%%%%%
+%% FLN
+%\newcommand{\GeV}      {~\mathrm{GeV}}
+\newcommand{\pb}      {~\mathrm{pb}}
+\def\nj{$n_{jet}$}
+\def\njs{$n_{jet}^*$}
+\def\co{coannihilation~}
+\def\pts{$P_T^{\rm * miss}$}
+\def\pt{\not\!\!{P_T}}
+\def\no{\nonumber\\}
+\def \chan{\widetilde{\chi}}
+\def \cha{\widetilde{\chi}^{\pm}_1}
+\def \chb{\widetilde{\chi}^{\pm}_2}
+\def \na{\widetilde{\chi}^{0}}
+\def \nb{\widetilde{\chi}^{0}_2}
+\def \nc{\widetilde{\chi}^{0}_3}
+\def \nd{\widetilde{\chi}^{0}_4}
+\def \g{\tilde{g}}
+\def \ql{\widetilde{q}_L}
+\def \qr{\widetilde{q}_R}
+\def \dl{\widetilde{d}_L}
+\def \dr{\widetilde{d}_R}
+\def \ul{\widetilde{u}_L}
+\def \ur{\widetilde{u}_R}
+\def \ccl{\widetilde{c}_L}
+\def \ccr{\widetilde{c}_R}
+\def \ssl{\widetilde{s}_L}
+\def \ssr{\widetilde{s}_R}
+\def \ta{\widetilde{t}_1}
+\def \tb{\widetilde{t}_2}
+\def \ba{\widetilde{b}_1}
+\def \bb{\widetilde{b}_2}
+\def \sta{\widetilde{\tau}_1}
+\def \stb{\widetilde{\tau}_2}
+\def \smr{\widetilde{\mu}_R}
+\def \ser{\widetilde{e}_R}
+\def \sml{\widetilde{\mu}_L}
+\def \sel{\widetilde{e}_L}
+\def \slr{\widetilde{l}_R}
+\def \sll{\widetilde{l}_L}
+\def \snl{\widetilde{\nu}_{\tau}}
+\def \snm{\widetilde{\nu}_{\mu}}
+\def \sne{\widetilde{\nu}_{e}}
+\def \hc{H^{\pm}}
+\def \lra{\longrightarrow}
+\def \ETmiss{${\not\!\!{E_T}}~$}
+\def \missET{${\not\!\!{E_T}}$}
+\def \mh{m_{1/2}}
+\def\.4{\vspace{-.5cm}}
+\newcommand{\ifb}{~\textrm{fb}^{-1}}
+\newcommand{\iab}{~\textrm{ab}^{-1}}
+
+\def\beq{\begin{equation}}
+\def\be{\begin{equation}}
+\def\beqn{\begin{eqnarray}}
+\def\ee{\end{equation}}
+\def\eeq{\end{equation}}
+\def\eeqn{\end{eqnarray}}
+\newcommand{\bl}[1]{{\color{blue}{#1}}}
+\newcommand{\pn}[1]{{\color{red}{#1}}}
+\newcommand{\gr}[1]{{\color{green}{#1}}}
+\def\co{coannihilation~}
 \def\TeV{\rm{TeV}}
 
 \def\co{coannihilation~}
 \def\G{\tilde G}
-\def\mP{M_\text{P}}
+\def\mP{M_{\rm Pl}}
 
-\def\non{\nonumber\\}
-\def\a{{\cal a}}
-\def\vp{\phi}
-\def\k{ \sqrt{ \gamma + \delta \cos (\alpha a/2f)}}
-\def\kk{ \gamma + \delta \cos (\alpha a/2f)}
+\author{
+Pran Nath\footnote{Email: p.nath@northeastern.edu}~\ and 
+Maksim Piskunov\footnote{Email:m.piskunov@northeastern.edu}\\~\\
+Department of Physics, Northeastern University,
+Boston, MA 02115-5000, USA
+}
 
-\def\F{{\cal F}} 
+\title{Supersymmetric Dirac-Born-Infeld Axionic Inflation and Non-Gaussianity}
 
-\title{\boldmath Supersymmetric Dirac-Born-Infeld Axionic Inflation and Non-Gaussianity}
-\author{Pran Nath}
-\author{and Maksim Piskunov}
-\affiliation{Department of Physics, Northeastern University,\\Boston, MA 02115-5000, USA}
-% e-mail addresses: one for each author, in the same order as the authors
-\emailAdd{p.nath@northeastern.edu}
-\emailAdd{m.piskunov@northeastern.edu}
+\begin{document}
+\maketitle
+\date
 
-\abstract{
+\textbf{Abstract: } 
   An analysis is given of inflation based on a supersymmetric Dirac-Born-Infeld (DBI) action in
   an axionic landscape. The DBI model we discuss involves a landscape of chiral superfields with one
   $U(1)$ shift symmetry which is broken by instanton type non-perturbative terms
@@ -70,13 +148,8 @@
   experimental upper limit and thus testable in improved
   experiment. Non-Gaussianity in this
   class of models is explored.
-}
-
-
-\begin{document} 
-\maketitle
-\flushbottom
-\fbox{{\today}}
+\newpage
+ 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
@@ -105,7 +178,7 @@
   spectral indices as well as the ratio of the tensor to the scalar power spectrum consistent with the Planck data~\cite{Adam:2015rua,Ade:2015lrj,Array:2015xqh}.
   Another quantity of interest in primordial perturbations is the so-called non-Gaussianity~\cite{Maldacena:2002vr,Seery:2005wm,Seery:2005gb,Chen:2005fe,Chen:2006nt,Lyth:2005fi}. It is known that models
   with canonical kinetic energy do not lead to non-Gaussianity and for non-Gaussianity one needs models
-  with non-canonical kinetic energy. In this context the Dirac-Born-Infeld (DBI) models are of interest (see, e.g.,~\cite{Alishahiha:2004eh,Easson:2007dh,Huang:2007hh,Gordon:2000hv,Langlois:2008wt}) which is the subject of interest in this work.
+  with non-canonical kinetic energy. In this context the Dirac-Born-Infeld (DBI) models are of interest (see, e.g.,~\cite{Alishahiha:2004eh,Easson:2007dh,Huang:2007hh,Gordon:2000hv,Langlois:2008wt}) which is the object of study in this work.
   Our work is focused on using shift symmetry and axions for inflation. For a partial list of other works where
   shift symmetry of axions is utilized in inflation
   see~\cite{ArkaniHamed:2003mz,Kaplan:2003aj,Green:2009ds,Higaki:2014pja,Higaki:2014mwa,Kadota:2016jlw,Kobayashi:2016vcx}
@@ -115,18 +188,19 @@
 
   The outline of the rest of the paper is as follows: In section \ref{sec2} we
   give a summary of previous results on the decomposition of a landscape of axion fields which undergo shifts
-  under a $U(1)$ global transfomation into fast-roll and slow-roll parts.
+  under a $U(1)$ global transformation into fast-roll and slow-roll parts.
   This is one of the central elements in the
   analysis of the inflationary models we discuss later.
   In section \ref{sec3} we give a description of the supersymmetric DBI Lagrangian
   in superspace for the case of two chiral fields $\Phi_1$ and $\Phi_2$ which are oppositely charged under a $U(1)$ global symmetry.
-  We then display the bosonic part of the Lagrangian after integration over the Grasmann co-ordinates.
+  We then display the bosonic part of the Lagrangian after integration over the Grassmann co-ordinates.
   Here it is shown that the Lagrangian depends on the dimensionless parameters $\alpha_1, \alpha_2, \alpha_3$; and $T$
   which has the dimension of the fourth power of mass. The general case including $\alpha_1, \alpha_2, \alpha_3$
   is too complicated to discuss analytically and thus here the analysis is given taking into account only the $\alpha_1$ terms.
   In section \ref{sec4} we discuss the pressure, density and the inflation equations for a generic DBI model. In section \ref{sec5} we
   discuss the slow-roll parameters, non-Gaussianity, and the speed of sound which enters in defining non-Gaussianity.
-  Experimental test of the two field DBI model is discussed in section \ref{sec6}, and conclusions are given in section \ref{sec7}.
+  Model simulations and 
+  experimental test of the two field DBI model is discussed in section \ref{sec6}, and conclusions are given in section \ref{sec7}.
   Further, details of the analysis are given in sections \ref{appenA}, \ref{appenB}, and \ref{appenC}.
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -250,7 +324,8 @@
     \label{Lag.22}
   \end{align}
   We note that the Lagrangian of Eq.~(\ref{Lag.11}) is a direct generalization of the Lagrangian for the single field
-  case (see section \ref{appenA}) which can be derived from a more basic 3-brane action (see, e.g., \cite{Sasaki:2012ka} and the references
+  case (see section \ref{appenA}) which can be derived from a more basic 3-brane action 
+  (see, e.g., \cite{Rocek:1997hi,Tseytlin:1999dj,Sasaki:2012ka} and the references
   therein). Here we simply extend the analysis to two fields
   in the most general supersymmetric form involving four covariant derivatives. In writing Eq.~(\ref{Lag.11}) we imposed
   an additional constraint which is invariance under $\Phi_1$ and $\Phi_2$ interchange.
@@ -280,11 +355,11 @@
     W_{sb}=\sum_{k=1}^m\left(A_{1, k}\Phi_1^k+A_{2, k}\Phi_2^k\right).
     \label{w3}
   \end{equation}
-  We note in passing that the superpotential of the type Eqs. (\ref{w1})-(\ref{w3}) was considered in \cite{Halverson:2017deq}.
-  Integration over $\theta's$ gives
+  We note in passing that the superpotential of the type Eqs. (\ref{w1})-(\ref{w3}) was considered in \cite{Nath:2017ihp,Halverson:2017deq}.
+  Integration over $\theta's$ gives for the full Lagrangian
   \begin{align}
     \mathcal{L}
-      &= \int d^2 \theta \mathcal{L}_D + \int d^2\theta \mathcal{L}_F = \mathcal{L}_I + \mathcal{L}_{II},\non
+      &=   \mathcal{L}_D +  \mathcal{L}_F= \mathcal{L}_I + \mathcal{L}_{II},\non
     \mathcal{L}_I &= T - T \sqrt{(1+A)^2 - B},\non
     \mathcal{L}_{II}& = F_1 F^*_1 + F_2 F^*_2
       + G(\phi) \Big[ \alpha_1(-2 F_1 F^*_1 \partial_a\phi_1 \partial^a \phi^*_1
@@ -424,15 +499,15 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
     \mathcal{T}=\frac{1}{2} \left(1+\sqrt{1-\frac{{\dot{a}}_{-}^2}{T}+\frac{\left(2-\alpha_1\right){\dot{a}}_{-}^4}{8 T^2}}\right),
   \end{equation}
   \begin{equation}
-    k=\beta \sqrt{\sum_{m, n}m n G_mG_n \left(1-\cos\left(\frac{a_- m}{\sqrt 2 f}\right)-\cos\left(\frac{a_- n}{\sqrt 2 f}\right)+\cos\left(\frac{a_- \left(m-n\right)}{\sqrt 2 f}\right)\right)},
+    k=\tilde\beta \sqrt{\sum_{m, n}m n {\cal{G}}_m {\cal {G}}_n \left(1-\cos\left(\frac{a_- m}{\sqrt 2 f}\right)-\cos\left(\frac{a_- n}{\sqrt 2 f}\right)+\cos\left(\frac{a_- \left(m-n\right)}{\sqrt 2 f}\right)\right)},
   \end{equation}
   \begin{equation}
     \mathcal{F}_{\pm} = \pm \left(\mp\frac{1}{2\alpha_1}k \left(\mathcal{T}-\frac{{\dot{a}}_{-}^2}{4 T}\right) + \sqrt{ \frac{1}{4\alpha_1^2} k^2 \left(\mathcal{T}-\frac{{\dot{a}}_{-}^2}{4 T}\right)^2+\frac{1}{27\alpha_1^3}{\left(\mathcal{T}+\left(\alpha_1-1\right)\frac{{\dot{a}}_{-}^2}{4 T}\right)}^3}\right)^{1/3},
   \end{equation}
   \begin{equation}
-    G_k = \frac{A_k 2^{1/2 (1 - k)}}{\beta \sqrt T f^{1-k}}\,.
+    {\cal{G}}_k = \frac{A_k 2^{1/2 (1 - k)}}{\tilde \beta \sqrt T f^{1-k}}\,.
   \end{equation}
-  Here $\beta$ is an arbitrary dimensionless parameter which we choose such that $G_k \sim 1$, and which determines the scale of symmetry breaking terms relative to $T$.
+  Here $\tilde \beta$ is an arbitrary dimensionless parameter which we choose such that ${\cal{G}}_k \sim 1$, and which determines the scale of symmetry breaking terms relative to $T$.
   
  %}
 
@@ -503,7 +578,8 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
   \begin{align}
     L= -\frac{1}{2} \partial_\mu a_{-}\partial a_{-}^{\mu} - V(a_-)
   \end{align}
-  the above equations reduce to the following
+  Eqs. (\ref{inf-1a}) and  (\ref{inf-2a}) 
+   reduce to the following
   \begin{align}
     3 M_\text{P}^2 \frac{\dot R^2}{R^2} = \frac{1}{2} \dot a_{-}^2 + V(a_-)\,,\non
     \ddot a_{-} + 3 H \dot a_{-} + V'(a_{-})=0\,,
@@ -623,13 +699,19 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
 
   \begin{figure}
     \centering
-    \includegraphics[width=1.0\textwidth]{figs/fig1.pdf}
+    \includegraphics[width=1.0\textwidth]{fig1.pdf}
     \caption{
-      Left panel: A plot of the ratio $r$ of the tensor to scalar power spectrum vs the scalar spectral index $n_s$
-      for the two field DBI model when $\alpha_1$ is allowed to vary, when $\alpha_2 = \alpha_3 = 0$. The plot shows that $89\%$ of simulated points are consistent with Planck constraints as shown in blue. Right panel: A plot of non-Gaussianity parameter $f_{NL}$ as
-      a function of $\alpha_1$ for the same data set as in the left plot. The green dots are parameter points which satisfy the Planck constraints
-      on $r$ and $n_s$ and lie in the blue region 
-      and the red dots are parameter points which are outside the experimentally allowed region. Black line corresponds to the 
+      Left panel: A plot of the ratio $r$ of the tensor to scalar power spectrum vs the scalar spectral index $n_s$ 
+      for the two field DBI model when $\alpha_1$ is allowed to vary, when $\alpha_2 = \alpha_3 = 0$. 
+      The blue region enclosed by the blue line is the one allowed by experiment in the 2$\sigma$ range.      
+            All the scatter points have pivot number of e-foldings in the range [50, 60].          
+         $89\%$ of the simulated points 
+      are consistent with Planck constraints as shown by green points while the red points lie outside the 68\% CL contour.
+            Right panel: A plot of non-Gaussianity parameter $f_{NL}$ as
+      a function of $\alpha_1$ for the same data set as in the left plot.  As in the left panel
+      the green dots are parameter points which satisfy the Planck constraints
+      on $r$ and $n_s$ and lie in the blue region  
+      and the red dots are parameter points which are outside the experimentally allowed region  on $r$ and $n_s$. The horizontal black line is the
  lower limit $f_{NL} =5$ of the 
         projected value for observation in future experiments for non-Gaussianity.
            The points that lie above the black line give non-Gaussianity $f_\text{NL} > 5$ which, however, are not consistent with Eq.~(\ref{data}).
@@ -639,7 +721,7 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
 
   \begin{figure}
     \centering
-    \includegraphics[width=1.0\textwidth]{figs/fig2.pdf}
+    \includegraphics[width=1.0\textwidth]{fig2.pdf}
     \caption{Left panel: A plot of the ratio $n_s$ vs $N_{\rm pivot}$ in the range $50-60$ for the same data set as in Fig.~(\ref{fig1}).
     The plot shows a mild dependence of $n_s$ on $N_{\rm pivot}$ in the range indicated. Right panel: The same as the left panel except
     $f_{NL}$ is plotted vs $N_{\rm pivot}$.
@@ -649,21 +731,18 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
 
   \begin{figure}
   	\centering
-  	\includegraphics[width=1.0\textwidth]{figs/fig3.pdf}
+  	\includegraphics[width=1.0\textwidth]{fig3.pdf}
   	\caption{The effect of $\alpha_2$ (left panel) and $\alpha_3$ (right panel) on non-Gaussianity for a parameter point 
 	taken from Fig.~(\ref{fig1}) which is consistent with 
 	Planck data and has the  largest non-Gaussianity among the set of parameter points 
-  in Fig.~(\ref{fig1}). Specifically, here $f = 0.429 M_\text{P}$, $a_{-, 0} = 0.233 M_\text{P}$, $\dot a_{-, 0} = -0.118 M_\text{P}^2$, $G_1 = G_2 = G_3 = 0$, $G_4 = 1$, $G_5 = -1.53$, $G_6 = 563$, $\alpha_1 = 1207$, $\beta = 0.802$, $T = M_\text{P}^4$. One 
+  in Fig.~(\ref{fig1}). Specifically, here $f = 0.429 M_\text{P}$, $a_{-, 0} = 0.233 M_\text{P}$, $\dot a_{-, 0} = -0.118 M_\text{P}^2$, ${\cal{G}}_1 = {\cal{G}}_2 = {\cal{G}}_3 = 0$, ${\cal{G}}_4 = 1$, ${\cal{G}}_5 = -1.53$, ${\cal{G}}_6 = 563$, $\alpha_1 = 1207$, $\tilde \beta = 0.802$, $T = M_\text{P}^4$. One 
 	finds that 
 	 the effect is not sufficient to obtain a significantly larger value of $f_\text{NL}$.}
   	\label{fig3}
   \end{figure}
 
 Numerical simulations performed consist of two parts: a large $0.5 \times 10^6$ points simulation in which $\alpha_2 = \alpha_3 = 0$, and a small simulation with $\alpha_2$ and $\alpha_3$ perturbed around an experimentally consistent point with the largest non-Gaussianity from the first simulation.
-
-  
-  
-  The evolution of the inflaton field $a_-$ in the large simulation Figs.~(\ref{fig1}) and (\ref{fig2}) is obtained by taking the effective axion Lagrangian Eqs.~(\ref{eq.axionLagrangian.I}) and (\ref{eq.axionLagrangian.II}), deriving Euler-Lagrange equation and Friedmann Eq.~(\ref{fried2}) using computer algebra, and solving them numerically. The integration is stopped when the ratio of the time derivative ($\dot n\left(t\right)$) of the e-foldings count to its time-average ($n\left(t\right) / t$) passes a threshold. Specifically,
+  The evolution of the inflaton field $a_-$ in the large simulation of Figs.~(\ref{fig1}) and (\ref{fig2}) is obtained by taking the effective axion Lagrangian Eqs.~(\ref{eq.axionLagrangian.I}) and (\ref{eq.axionLagrangian.II}), deriving Euler-Lagrange equation and Friedmann Eq.~(\ref{fried2}) using computer algebra, and solving them numerically. The integration is stopped when the ratio of the time derivative ($\dot n\left(t\right)$) of the e-foldings count to its time-average ($n\left(t\right) / t$) passes a threshold. Specifically,
   \begin{equation} 
   	\frac{\dot n \left(t\right)}{n\left(t\right) / t} < \theta_n,
   \end{equation} 
@@ -720,7 +799,8 @@ Numerical simulations performed consist of two parts: a large $0.5 \times 10^6$ 
 	in the superpotential. The analysis is done
 	in the vacuum state with stabilized saxions and the scalar potential can be decomposed into a fast-roll and a slow-roll
 	part where the slow-roll part of the potential is now velocity dependent. This velocity dependence is a direct consequence of the
-	DBI form of the action. In the analysis we have obtained an explicit form for the auxiliary fields $F_k$ which satisfy a cubic equation
+	DBI form of the action. In the analysis for the case $\alpha_2=0=\alpha_3$
+	 we have obtained an explicit form for the auxiliary fields $F_k$ which satisfy a cubic equation
 	in terms of the inflation field. We have analyzed the scalar and tensor power spectrum and computed the spectral indices.
 	It is shown that a significant part of the parameter space exists which supports inflation consistent with the current experimental
 	constraints on the ratio of the tensor to the scalar power spectrum and the spectral indices. A remarkable aspect of the
@@ -728,19 +808,21 @@ Numerical simulations performed consist of two parts: a large $0.5 \times 10^6$ 
 	and consequently also a significant value for the spectral index $n_t$. This is in contrast to a supersymmetric non-DBI model
 	which typically has a suppressed value of $r$ and of $n_t$. An analysis of non-Gaussianity in the model was also carried out.
 	It is found that for the model parameters that support inflation consistent with the Planck experimental values on $r$ and
-	$n_s$, the non-Gaussianity is typically small. It is of interest to achieve this class of models in string theory using
+	$n_s$, the non-Gaussianity is typically small. This holds true even when the parameters $\alpha_2$ and $\alpha_3$ along with
+	$\alpha_1$ are included in the analysis.
+		It is of interest to achieve this class of models in string theory using
 	moduli stabilization of the type used in KKLT~\cite{Kachru:2003aw}
 	or the Large Volume Scenario~\cite{Balasubramanian:2005zx}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\acknowledgments
+\textbf{Acknowledgments:}
 	This research was supported in part by the NSF Grant PHY-1620575.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Appendix A: Single field supersymmetric DBI Lagrangian \label{appenA}}
 
 	To define notation and to discuss the technique used in the analysis of this work we consider the case here of a single
-	superfield. Thus we consider a supersymmetric DBI Lagrangian of the form
+	superfield. Thus we consider a supersymmetric DBI Lagrangian of the form~\cite{Rocek:1997hi,Tseytlin:1999dj,Sasaki:2012ka}	
 	\begin{equation}\label{DisplayFormulaNumbered:eq.dbiSuperLagrangian}
 		\mathcal{L}_{DBI}=\int d^4\theta \left(\Phi \Phi^\dagger+\frac{1}{16}\left(D^\alpha \Phi D_\alpha \Phi \right)\left({\bar{D}}^{\dot{\alpha}}\Phi^\dagger {\bar{D}}_{\dot{\alpha}}\Phi^\dagger \right)G\left(\Phi \right)\right),
 	\end{equation}
@@ -950,7 +1032,9 @@ Numerical simulations performed consist of two parts: a large $0.5 \times 10^6$ 
   \begin{equation}
     Q_\pm = \left(-\frac{1}{T^{1/2}}\sqrt{\frac{1}{4}\frac{\partial W^*}{\partial \phi^*}}\pm\sqrt{\frac{1}{27}{\left(\frac{\partial W}{\partial \phi}\right)}^{-1}+\frac{1}{4T}\frac{\partial W^*}{\partial \phi^*}}\right)^{1/3}.
   \end{equation}
-	We can expand $F$ in powers of $1/T$ and this expansion is exhibited in Eq.~(\ref{fexpand}). Similarly we can expand $V$ in powers of $1/T$ and this
+	We can expand $F$ given by  Eq.(\ref{DisplayFormulaNumbered:eq.dbiPotentialF}) 	
+in powers of $1/T$ and this expansion is exhibited in Eq.~(\ref{fexpand}). Similarly we can expand $V$ given by 
+Eq.(\ref{DisplayFormulaNumbered:eq.dbiPotentialWithF})  in powers of $1/T$ and this
 	expansion is given in Eq.~(\ref{vexpand}).
 	One can see that the lowest terms in the expansion for both $F$ and $V$ give the standard result.
 
