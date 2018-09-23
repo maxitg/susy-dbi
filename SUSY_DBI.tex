@@ -381,8 +381,8 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
   For arbitrary $m$ these equations cannot be solved in a closed form. However, we can solve for $f_i$ in a perturbative
   expansion where we treat the contribution arising from $W_{sb}$ as the perturbation. A significant simplicity results if we
   assume $A_k\equiv A_{1,k}=A_{2,k}$. In this case $f\equiv f_1=f_2$ and   we find that 
-    \begin{align}
-  f&= f_0 - \frac{1}{\lambda} \sum_{k} \frac{kA_k}{2^{k/2-1} } f_0^{k-3} + \cdots  \nonumber\\
+    \begin{align} \label{eq.f.series}
+  f&= f_0 - \frac{2}{3\lambda} \sum_{k} \frac{kA_k}{2^{k/2-1} } f_0^{k-3} + \cdots  \nonumber\\
   f_0&\equiv \pm \sqrt{\frac{-2\mu}{\lambda}}\,.
   \end{align}
   Eq. (3.22) exhibits the value of the stability point  $f$ of the radial modes in terms of the input parameters of the superpotential
@@ -716,6 +716,19 @@ literature which include local, equilibrium and orthogonal ~\cite{Ade:2015ava} (
   \end{figure}
 
   \begin{figure}
+    \centering
+    \includegraphics[width=1.0\textwidth]{figs/fig4.pdf}
+    \caption{Left panel: A plot of axion decay constant $f$ vs scalar spectral index $n_s$ for the
+      same data set as in Fig.~(\ref{fig1}).
+          Right panel: The same as the left panel except $f$ is plotted vs tensor to scalar ratio
+      $r$.
+          Note that $20\%$ of experimentally consistent (green) points in the figure satisfy
+      $f<M_\text{P}$. Also note that we vary $f$ explicitly in this paper, which implicitly sets
+      the value of $\lambda$, as can be seen from Eq.~(\ref{eq.f.series}).}
+    \label{fig4}
+  \end{figure}
+
+  \begin{figure}
   	\centering
   	\includegraphics[width=1.0\textwidth]{figs/fig3.pdf}
   	\caption{The effect of $\alpha_2$ (left panel) and $\alpha_3$ (right panel) on non-Gaussianity for a parameter point 
@@ -728,7 +741,7 @@ literature which include local, equilibrium and orthogonal ~\cite{Ade:2015ava} (
   \end{figure}
 
 Numerical simulations performed consist of two parts: a large $0.5 \times 10^6$ points simulation in which $\alpha_2 = \alpha_3 = 0$, and a small simulation with $\alpha_2$ and $\alpha_3$ perturbed around an experimentally consistent point with the largest non-Gaussianity from the first simulation.
-  The evolution of the inflaton field $a_-$ in the large simulation of Figs.~(\ref{fig1}) and (\ref{fig2}) is obtained by taking the effective axion Lagrangian Eqs.~(\ref{eq.axionLagrangian.I}) and (\ref{eq.axionLagrangian.II}), deriving Euler-Lagrange equation and Friedmann Eq.~(\ref{fried2}) using computer algebra, and solving them numerically. The integration is stopped when the ratio of the time derivative ($\dot n\left(t\right)$) of the e-foldings count to its time-average ($n\left(t\right) / t$) passes a threshold. Specifically,
+  The evolution of the inflaton field $a_-$ in the large simulation of Figs.~(\ref{fig1}), (\ref{fig2}), and (\ref{fig4}) is obtained by taking the effective axion Lagrangian Eqs.~(\ref{eq.axionLagrangian.I}) and (\ref{eq.axionLagrangian.II}), deriving Euler-Lagrange equation and Friedmann Eq.~(\ref{fried2}) using computer algebra, and solving them numerically. The integration is stopped when the ratio of the time derivative ($\dot n\left(t\right)$) of the e-foldings count to its time-average ($n\left(t\right) / t$) passes a threshold. Specifically,
   \begin{equation} 
   	\frac{\dot n \left(t\right)}{n\left(t\right) / t} < \theta_n,
   \end{equation} 
@@ -757,7 +770,7 @@ Numerical simulations performed consist of two parts: a large $0.5 \times 10^6$ 
   	\label{sound}
   \end{align}
   The results of the analysis for the two field supersymmetric DBI discussed above
-  are presented in Figs. (\ref{fig1}) and (\ref{fig2}). The left panel of Fig. (\ref{fig1}) gives
+  are presented in Figs. (\ref{fig1}), (\ref{fig2}), and (\ref{fig4}). The left panel of Fig. (\ref{fig1}) gives
   a plot of $r$ vs $n_s$. Here the region enclosed by the blue line is the one allowed by experiment in the $2\sigma$ range.
   The Monte Carlo analysis shows that the experimentally allowed region is well populated by the parameter points of the model.
   One interesting feature of the analysis is that compared to the
@@ -779,6 +792,9 @@ Numerical simulations performed consist of two parts: a large $0.5 \times 10^6$ 
   The right panel gives a plot of $f^{equil}_{NL}$ on $N_{\rm pivot}$. Here one finds the $f^{equil}_{NL}$ has a relatively small variation in the range $[50,60]$ for
   $N_{\rm pivot}$. In either case one cannot draw any significant conclusion regarding the dependence of these parameters
   on the number of e-foldings as long as one is in the $N_{\rm pivot}$ range of $[50,60]$.
+
+  Finally, Fig.~(\ref{fig4}) demonstrates that it is indeed possible to produce experimentally
+  consistent inflation with $f < M_\text{P}$ in our model.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion\label{sec7}}
