@@ -380,9 +380,9 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
   the sum arises from $W_{sb}$. 
   For arbitrary $m$ these equations cannot be solved in a closed form. However, we can solve for $f_i$ in a perturbative
   expansion where we treat the contribution arising from $W_{sb}$ as the perturbation. A significant simplicity results if we
-  assume $A_k\equiv= A_{1,k}=A_{2,k}$. In this case $f\equiv f_1=f_2$ and   we find that 
+  assume $A_k\equiv A_{1,k}=A_{2,k}$. In this case $f\equiv f_1=f_2$ and   we find that 
     \begin{align}
-  f&= f_0 - \frac{2}{3\lambda} \sum_{k} \frac{kA_k}{2^{k/2-1} } f_0^{k-3} + \cdots  \nonumber\\
+  f&= f_0 - \frac{1}{\lambda} \sum_{k} \frac{kA_k}{2^{k/2-1} } f_0^{k-3} + \cdots  \nonumber\\
   f_0&\equiv \pm \sqrt{\frac{-2\mu}{\lambda}}\,.
   \end{align}
   Eq. (3.22) exhibits the value of the stability point  $f$ of the radial modes in terms of the input parameters of the superpotential
@@ -676,19 +676,32 @@ literature which include local, equilibrium and orthogonal ~\cite{Ade:2015ava} (
   \begin{figure}
     \centering
     \includegraphics[width=1.0\textwidth]{figs/fig1.pdf}
-    \caption{
-      Left panel: A plot of the ratio $r$ of the tensor to scalar power spectrum vs the scalar spectral index $n_s$ 
-      for the two field DBI model when $\alpha_1$ is allowed to vary, when $\alpha_2 = \alpha_3 = 0$. 
-      The blue region enclosed by the blue line is the one allowed by experiment in the 2? range.      
-            All the scatter points have pivot number of e-foldings in the range [50, 60].          
-         $89\%$ of the simulated points 
-      are consistent with Planck constraints as shown by green points while the red points lie outside the 68\% CL contour.
-            Right panel: A plot of non-Gaussianity parameter $f^{equil}_{NL}$ as
-      a function of $\alpha_1$ for the same data set as in the left plot.  As in the left panel
+    \caption{Left panel: A plot of the ratio $r$ of the tensor to scalar power spectrum vs the
+      scalar spectral index $n_s$ for the two field DBI model.
+      The blue region enclosed by the blue line is the one allowed by experiment in the 2$\sigma$
+      range. $89\%$ of the simulated points are consistent with Planck constraints as shown by green
+      points while the red points lie outside the 68\% CL contour.
+          Right panel: A plot of non-Gaussianity parameter $f^{equil}_{NL}$ as
+      a function of $\alpha_1$ for the same data set as in the left plot. As in the left panel
       the green dots are parameter points which satisfy the Planck constraints
-      on $r$ and $n_s$ and lie in the blue region  
-      and the red dots are parameter points which are outside the experimentally allowed region  on $r$ and $n_s$. 
-    }
+      on $r$ and $n_s$ and lie in the blue region and the red dots are parameter points which are
+      outside the experimentally allowed region on $r$ and $n_s$.
+          There are $0.5 \times 10^6$ points shown which are distributed according to the following:
+      $\alpha_1 \sim X_{0, \infty}$, $\alpha_2 = \alpha_3 = 0$,
+      $T = M_\text{P}^4$,
+      $f \sim X_{0, \infty} M_\text{P}$,
+      $\tilde\beta \sim X_{0, \infty}$,
+      $m = 6$, % G_7 = G_8 = ... = 0
+      ${\cal{G}}_1 = {\cal{G}}_2 = {\cal{G}}_3 = 0$, ${\cal{G}}_4 = 1$,
+      ${\cal{G}}_5 \sim {\cal{G}}_6 \sim \mathcal{U}\left\{-1, 1\right\} \times X_{0, \infty}$,
+      $N_{\rm pivot} \sim \mathcal{U}\left(50, 60\right)$,
+      $a_{-, 0} \sim \mathcal{U}\left(0, 2\pi\right) \times f$,
+      $\dot a_{-, 0} \sim \mathcal{U}\left(-1, 1\right)
+          \times \left(2 \sqrt{T}/\left(\sqrt{2} \sqrt{\alpha_1} + 2\right)^{1/2}\right)$
+      where $X_{0, \infty} = \mathcal{U}\left\{X_{0, 1}, 1 / X_{0, 1}\right\}$,
+      $X_{0, 1} = \mathcal{U}\left(0, 1\right)$, $\mathcal{U}$ refers to a uniform distribution,
+      and the distribution of $\dot a_{-, 0}$ is chosen such that the expression under the
+      square root in Eq.~(\ref{eq.axionLagrangian.I}) is positive.}
     \label{fig1}
   \end{figure}
 
@@ -708,7 +721,7 @@ literature which include local, equilibrium and orthogonal ~\cite{Ade:2015ava} (
   	\caption{The effect of $\alpha_2$ (left panel) and $\alpha_3$ (right panel) on non-Gaussianity for a parameter point 
 	taken from Fig.~(\ref{fig1}) which is consistent with 
 	Planck data and has the  largest non-Gaussianity among the set of parameter points 
-  in Fig.~(\ref{fig1}). Specifically, here $f = 0.429 M_\text{P}$, $a_{-, 0} = 0.233 M_\text{P}$, $\dot a_{-, 0} = -0.118 M_\text{P}^2$, ${\cal{G}}_1 = {\cal{G}}_2 = {\cal{G}}_3 = 0$, ${\cal{G}}_4 = 1$, ${\cal{G}}_5 = -1.53$, ${\cal{G}}_6 = 563$, $\alpha_1 = 1207$, $\tilde \beta = 0.802$, $T = M_\text{P}^4$. One 
+  in Fig.~(\ref{fig1}). Specifically, here $f = 0.429 M_\text{P}$, $a_{-, 0} = 0.233 M_\text{P}$, $\dot a_{-, 0} = -0.118 M_\text{P}^2$, $m = 6$, ${\cal{G}}_1 = {\cal{G}}_2 = {\cal{G}}_3 = 0$, ${\cal{G}}_4 = 1$, ${\cal{G}}_5 = -1.53$, ${\cal{G}}_6 = 563$, $\alpha_1 = 1207$, $\tilde \beta = 0.802$, $T = M_\text{P}^4$. One 
 	finds that 
 	 the effect is not sufficient to obtain a significantly larger value of $f_\text{NL}$.}
   	\label{fig3}
@@ -730,6 +743,7 @@ Numerical simulations performed consist of two parts: a large $0.5 \times 10^6$ 
  speed of sound $c_s$ 
   and the non-Gaussianity amplitude $f_\text{NL}$.
     In the $0.5 \times 10^6$ points Monte Carlo analysis we allow $\alpha_1$ to vary
+  (full distribution is specified in Fig.~(\ref{fig1}))
   and search for solutions that satisfy the experimental constraints. Thus the
   current experimental limits from Planck experiment at $k_0=0.05\, {\rm Mpc}^{-1}$ are as follows~\cite{Adam:2015rua,Ade:2015lrj,Array:2015xqh}
   \begin{align}
