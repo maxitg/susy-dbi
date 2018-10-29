@@ -307,7 +307,7 @@
       + \left(\frac{\partial W}{\partial \phi_1}F_1+ \frac{\partial W}{\partial \phi_2}F_2 + h.c.\right).
     \label{Lag.23}
   \end{align}
-  where $\frac{\partial W}{\partial \phi_k}$ (k=1,2) are given by 
+  where $\frac{\partial W}{\partial \phi_k}$ (k=1,2) are given by
   \begin{align}
    \frac{\partial W}{\partial \phi_1}= \mu \phi_2 + \lambda (\phi_1\phi_2) \phi_2 +\sum_{k=1}^m k A_{1,k} \phi_1^{k-1}\,,\nonumber\\
    \frac{\partial W}{\partial \phi_2}= \mu \phi_1 + \lambda (\phi_1\phi_2) \phi_1 +\sum_{k=1}^m k A_{1,k} \phi_2^{k-1}\,,  \nonumber
@@ -373,9 +373,9 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
   \begin{equation} \label{DisplayFormulaNumbered:eq.twoDBI.stabilization.2}
     \mu f_1 + \frac{1}{2} \lambda f_1^2 f_2+\sum_{k=1}^m \frac{1}{2^{k/2-1}} k A_{2, k}f_2^{k-1}=0.
   \end{equation}
-  Eqs.(\ref{DisplayFormulaNumbered:eq.twoDBI.stabilization.1}) and 
-  (\ref{DisplayFormulaNumbered:eq.twoDBI.stabilization.2})    
-  provide the stability conditions  for the radial modes $\rho_1$ and $\rho_2$. 
+  Eqs.(\ref{DisplayFormulaNumbered:eq.twoDBI.stabilization.1}) and
+  (\ref{DisplayFormulaNumbered:eq.twoDBI.stabilization.2})
+  provide the stability conditions  for the radial modes $\rho_1$ and $\rho_2$.
   Here the first two terms on the left hand side of each of the above equations arise from $W_s$ while the last term involving
   the sum arises from $W_{sb}$. 
   For arbitrary $m$ these equations cannot be solved in a closed form. However, we can solve for $f_i$ in a perturbative
@@ -387,7 +387,7 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
   \end{align}
   Eq. (3.22) exhibits the value of the stability point  $f$ of the radial modes in terms of the input parameters of the superpotential
   including $W_s$ and $W_{sb}$. 
-  
+
   For the case of two fields, we have $F_1$ and $F_2$, which can be solved using Eq.~(\ref{auxsolution}).
   For our choice of $W$, we can evaluate $p_k$ and $q_k$ (k=1,2) explicitly so that we have
   \begin{equation} \label{DisplayFormulaNumbered:eq.twoDBI.p.1}
@@ -431,10 +431,10 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
   GUT scale. These $2m-1$ linear combinations of axion fields are invariant under the $U(1)$ global symmetry. The remaining one 
   linear combination of axion fields is corresponds to the pseudo-Nambu-Goldstone bosons (pNGB)  and is massless. On including $W_{sb}$ in
    spontaneous breaking, the pNGB also gains a mass. However, this mass is much smaller than those of the other $2m-1$ axions 
-   because $|W_{sb}| << |W_s|$. In the analysis of this there is just one pair of axion field so we have only $a_+$ and $a_-$ 
+   because $|W_{sb}| << |W_s|$. In the analysis of this paper there is just one pair of axion field so we have only $a_+$ and $a_-$ 
    where $a_+$ is the axion field invariant under the $U(1)$ global symmetry and $a_-$ is the field which is the pNGB.  
    In  \cite{Nath:2017ihp} it was shown that   $a_+$ rolls an order of magnitude or more  faster than $a_-$ as shown by blue lines (fast roll) vs red lines (slow roll) in Fig.1 and Fig.2 of  \cite{Nath:2017ihp}.  This phenomenon also holds for the current analysis presented here.
-  
+
   To simplify the analysis we  set $A_{1,k} = A_{2,k} = A_k$ and set $f_1 = f_2 = f_+ = f_- = f$.
   In this case we have neglected spatial gradients:
   \begin{align}
@@ -549,12 +549,20 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
   \end{align}
   Eqs. (\ref{inf-1a}) and  (\ref{inf-2a}) 
    reduce to the following
-  \begin{align}
+  \begin{align} \label{inf-canonical}
     3 M_\text{P}^2 \frac{\dot R^2}{R^2} = \frac{1}{2} \dot a_{-}^2 + V(a_-)\,,\non
     \ddot a_{-} + 3 H \dot a_{-} + V'(a_{-})=0\,,
   \end{align}
   which are correctly the relation for slow roll for the case when one has canonical kinetic energy and the potential
   is velocity independent. However, in our case we have more terms.
+  Here we emphasize that while for
+  conventional inflation models the potential plays a central role in the analysis, this is not the case for the Dirac-Born-Infeld case.
+  Here the potential by itself is not sufficient and the entire Lagrangian enters in the analysis.
+  The potential in isolation plays no role. This can be seen from the Friedman equations
+  Eqs.~(\ref{inf-1a}) and (\ref{inf-2a}) above where the full Lagrangian and not just the potential
+  enters. Only in the case when we assume canonical kinetic energy and no dependence of the
+  potential on the derivatives of the fields that one recovers the conventional Friedman equations
+  where the potential appears as shown in Eqs.~(\ref{inf-canonical}).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Slow roll parameters and non-Gaussianity \label{sec5}}
@@ -651,8 +659,8 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
     \left< \zeta(\vec k_1) \zeta(\vec k_2) \zeta(\vec k_3) \right> = (2\pi)^7 \delta^3(\vec k_1+ \vec k_2+ \vec k_3) \frac{\sum_i k_i^3}{\prod_i k_i^3}
     \left[ -\frac{3}{10} f_{NL} (P_k^{\zeta})^2 \right],
   \end{align}
-  where $P_k^{\zeta}$ is the scalar power spectrum and $f_{NL}$ is a measure of non-Gaussianity. 
-  Non-Gaussianity depends strongly on  shape and various types of shapes have been discussed in the 
+  where $P_k^{\zeta}$ is the scalar power spectrum and $f_{NL}$ is a measure of non-Gaussianity.
+  Non-Gaussianity depends strongly on  shape and various types of shapes have been discussed in the
 literature which include local, equilibrium and orthogonal ~\cite{Ade:2015ava} (For earlier analyses see 
 \cite{Komatsu:2001rj,Komatsu:2003fd,Verde:1999ij}).
  The non-Gaussianity  we will discuss here is the one which has the shape of an equilateral triangle, 
@@ -667,7 +675,7 @@ literature which include local, equilibrium and orthogonal ~\cite{Ade:2015ava} (
     z_2= \beta^2 L_{,\beta \beta} + \frac{2}{3} \beta^3 L_{,\beta\beta\beta}\,,~~
     z= \frac{\dot z_2}{z_2 H}\,.
   \end{align}
- where the superscript ``equal''  on $f_{NL}$ indicates that we are specifically considering the shape to be of an equilateral 
+ where the superscript ``equil''  on $f_{NL}$ indicates that we are specifically considering the shape to be of an equilateral
  triangle.
   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -716,41 +724,28 @@ literature which include local, equilibrium and orthogonal ~\cite{Ade:2015ava} (
   \end{figure}
 
   \begin{figure}
-    \centering
-    \includegraphics[width=1.0\textwidth]{figs/fig4.pdf}
-    \caption{Left panel: A plot of axion decay constant $f$ vs scalar spectral index $n_s$ for the
-      same data set as in Fig.~(\ref{fig1}).
-          Right panel: The same as the left panel except $f$ is plotted vs tensor to scalar ratio
-      $r$.
-          Note that $20\%$ of experimentally consistent (green) points in the figure satisfy
-      $f<M_\text{P}$. Also note that we vary $f$ explicitly in this paper, which implicitly sets
-      the value of $\lambda$, as can be seen from Eq.~(\ref{eq.f.series}).}
-    \label{fig4}
-  \end{figure}
-
-  \begin{figure}
   	\centering
   	\includegraphics[width=1.0\textwidth]{figs/fig3.pdf}
   	\caption{The effect of $\alpha_2$ (left panel) and $\alpha_3$ (right panel) on non-Gaussianity for a parameter point 
 	taken from Fig.~(\ref{fig1}) which is consistent with 
 	Planck data and has the  largest non-Gaussianity among the set of parameter points 
-  in Fig.~(\ref{fig1}). Specifically, here $f = 0.429 M_\text{P}$, $a_{-, 0} = 0.233 M_\text{P}$, $\dot a_{-, 0} = -0.118 M_\text{P}^2$, $m = 6$, ${\cal{G}}_1 = {\cal{G}}_2 = {\cal{G}}_3 = 0$, ${\cal{G}}_4 = 1$, ${\cal{G}}_5 = -1.53$, ${\cal{G}}_6 = 563$, $\alpha_1 = 1207$, $\tilde \beta = 0.802$, $T = M_\text{P}^4$. One 
-	finds that 
+  in Fig.~(\ref{fig1}). Specifically, here $f = 0.429 M_\text{P}$, $a_{-, 0} = 0.233 M_\text{P}$, $\dot a_{-, 0} = -0.118 M_\text{P}^2$, $m = 6$, ${\cal{G}}_1 = {\cal{G}}_2 = {\cal{G}}_3 = 0$, ${\cal{G}}_4 = 1$, ${\cal{G}}_5 = -1.53$, ${\cal{G}}_6 = 563$, $\alpha_1 = 1207$, $\tilde \beta = 0.802$, $T = M_\text{P}^4$. One
+	finds that
 	 the effect is not sufficient to obtain a significantly larger value of $f_\text{NL}$.}
   	\label{fig3}
   \end{figure}
 
 Numerical simulations performed consist of two parts: a large $0.5 \times 10^6$ points simulation in which $\alpha_2 = \alpha_3 = 0$, and a small simulation with $\alpha_2$ and $\alpha_3$ perturbed around an experimentally consistent point with the largest non-Gaussianity from the first simulation.
-  The evolution of the inflaton field $a_-$ in the large simulation of Figs.~(\ref{fig1}), (\ref{fig2}), and (\ref{fig4}) is obtained by taking the effective axion Lagrangian Eqs.~(\ref{eq.axionLagrangian.I}) and (\ref{eq.axionLagrangian.II}), deriving Euler-Lagrange equation and Friedmann Eq.~(\ref{fried2}) using computer algebra, and solving them numerically. The integration is stopped when the ratio of the time derivative ($\dot n\left(t\right)$) of the e-foldings count to its time-average ($n\left(t\right) / t$) passes a threshold. Specifically,
-  \begin{equation} 
-  	\frac{\dot n \left(t\right)}{n\left(t\right) / t} < \theta_n,
-  \end{equation} 
-  where the threshold $\theta_n$ is chosen to be much less than one, and specifically
-   in the analysis here it is chosen as $\theta_n = 1 / 16$. Increasing this parameter might stop integration prematurely, whereas decreasing it will worsen performance.
+  The evolution of the inflaton field $a_-$ in the large simulation of Figs.~(\ref{fig1}), (\ref{fig2}), and (\ref{fig4}) is obtained by taking the effective axion Lagrangian Eqs.~(\ref{eq.axionLagrangian.I}) and (\ref{eq.axionLagrangian.II}), deriving Euler-Lagrange equation and Friedmann Eq.~(\ref{fried2}) using computer algebra, and solving them numerically. The integration is stopped when $\ddot{a} = 0$ where $a$ is the scale factor
+  and one may write the end of inflation constraint as 
+
+  \begin{equation}
+    \ddot{a} = a H^2(1 + \frac{\dot H}{H^2}) = 0.
+  \end{equation}
   An analytic expression similar to Eq.~(\ref{eq.axionLagrangian.II}), however,  cannot be derived  for  non-zero $\alpha_2$ and $\alpha_3$. In this case,  equations for the auxiliary fields $F_k$ are  solved numerically,  and the Lagrangian in terms of $\phi$ (Eq.~(\ref{Lag.23})) is
   also evaluated numerically for each set of values for ($a_-$, $\dot a_-$).  
    This process is significantly slower, therefore, in this case the simulations are only done for $29$ sets of parameter values as can be seen in Fig.~(\ref{fig3}). 
-    The time of horizon exit is then found by counting $N_\text{pivot}$ e-foldings back from the end of integration, where $N_\text{pivot}$ is varied between $50$ and $60$. Note, the time of horizon exit depends on $\theta_n$, however, we find that due to $\dot n$ being small near the end of integration, the dependence is weak, and it affects the results less than the experimental uncertainty of $N_\text{pivot} \in \left[50, 60\right]$.{}
+    The time of horizon exit is then found by counting $N_\text{pivot}$ e-foldings back from the end of integration, where $N_\text{pivot}$ is varied between $50$ and $60$. 
 
   Finally, we evaluate the experimental observables at the time of horizon exit using equations from section \ref{sec5} and reusing Euler-Lagrange and Friedmann equations to compute higher time derivatives of the Lagrangian, pressure and density. The observables computed are the ratio $r$ of the power spectrum of tensor to scalar perturbations, the spectral indices of scalar $n_s$ and tensor $n_t$ perturbations, 
  speed of sound $c_s$ 
@@ -780,9 +775,23 @@ Numerical simulations performed consist of two parts: a large $0.5 \times 10^6$ 
   of \cite{Nath:2017ihp}.
   The right panel of Fig. (\ref{fig1}) gives a plot of $f^{equil}_{NL}$ vs $\alpha_1$. We see a significant sensitivity
   of $f^{equil}_{NL}$ to $\alpha_1$. However, overall $f^{equil}_{NL}$ is typically small and mostly lies below 0.5. The effect of $\alpha_2$ and $\alpha_3$ for the point from Fig.~\ref{fig1} with largest non-Gaussianity is shown on Fig.~\ref{fig3}. One can see that although non-Gaussianity $f_\text{NL}$ is sensitive to $\alpha_2$ and $\alpha_3$, it still lies below 0.5. This level
-  of non-Gaussianity appears too low for observation in the near future. 
-  
-  The most recent analyses of non-Gaussianity based on Planck data are given in ~\cite{Ade:2015ava}. 
+  of non-Gaussianity appears too low for observation in the near future.
+
+  \begin{figure}
+    \centering
+    \includegraphics[width=1.0\textwidth]{figs/fig4.pdf}
+    \caption{
+      Left panel: A plot of $f / M_{\rm P}$ as a function of $n_s$ which is in the allowed range of
+      experiment and $N_{\rm pivot}$ in the range $50-60$ for the same data set as in
+      Fig.~(\ref{fig1}).
+      Right panel: The same as the left panel except that the plot is of $f / M_{\rm P}$ as a
+      function of $r$.
+      We note that the plots show that there are a large number of parameter points where
+      $f / M_{\rm P} < 1$ consistent with all the experimental data.}
+    \label{fig4}
+  \end{figure}
+
+  The most recent analyses of non-Gaussianity based on Planck data are given in ~\cite{Ade:2015ava}.
   Here the analysis is done using cosmic microwave background (CMB) temperature and E-mode polarization 
   data. The  analysis using 
   temperature alone give $f^{equil} = -16 \pm 70$ (68 \% CL, statistical) and an analysis combining temperature and polarization data 
@@ -793,8 +802,12 @@ Numerical simulations performed consist of two parts: a large $0.5 \times 10^6$ 
   $N_{\rm pivot}$. In either case one cannot draw any significant conclusion regarding the dependence of these parameters
   on the number of e-foldings as long as one is in the $N_{\rm pivot}$ range of $[50,60]$.
 
-  Finally, Fig.~(\ref{fig4}) demonstrates that it is indeed possible to produce experimentally
-  consistent inflation with $f < M_\text{P}$ in our model.
+  Finally in Fig.(\ref{fig4}) we exhibit that the analysis contains a significant part of the parameter space where
+  inflation consistent with the desired number of e-foldings in the range $[50,60]$ and $n_s$ and $r$ consistent
+  with Planck data can be gotten in the axion inflation model with $f/M_{\rm P} <1$. Thus the left panel
+  of Fig. (\ref{fig4}) exhibits $f/M_{\rm P}$ as a function of $n_s$ in the range allowed by the Planck data constraint of Eq.(\ref{data})
+  and the right panel of Fig. (\ref{fig4}) gives $f/M_{\rm P}$ as a function of $r$
+  containing the range in $r$ consistent with the Planck data constraint of Eq.(\ref{data}).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion\label{sec7}}
