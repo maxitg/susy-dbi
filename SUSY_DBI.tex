@@ -477,7 +477,14 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
     \label{lag12d}
   \end{equation}
   Here $\tilde \beta$ is an arbitrary dimensionless parameter which we choose such that ${\cal{G}}_k \sim 1$, and which determines the scale of symmetry breaking terms relative to $T$.
-  
+
+  Note that there are two ways here to achieve $A_k \ll \mu \approx M_\text{P}$, which is the
+  condition needed for slow-roll approximation.
+  One way is to consider small values of $\tilde\beta$, in which case we found DBI plays
+  insignificant role and we reproduce the results of~\cite{Nath:2017ihp}.
+  Another way is to consider $T \ll M_\text{P}$, and $\tilde\beta \approx M_\text{P}$, which is the
+  case we will focus on for the remainder of this paper.
+ 
  %}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -694,9 +701,9 @@ literature which include local, equilibrium and orthogonal ~\cite{Ade:2015ava} (
       the green dots are parameter points which satisfy the Planck constraints
       on $r$ and $n_s$ and lie in the blue region and the red dots are parameter points which are
       outside the experimentally allowed region on $r$ and $n_s$.
-          There are $0.5 \times 10^6$ points shown which are distributed according to the following:
+          Points are distributed according to the following:
       $\alpha_1 \sim X_{0, \infty}$, $\alpha_2 = \alpha_3 = 0$,
-      $T = M_\text{P}^4$,
+      $T = 10^{-12} M_\text{P}^4$,
       $f \sim X_{0, \infty} M_\text{P}$,
       $\tilde\beta \sim X_{0, \infty}$,
       $m = 6$, % G_7 = G_8 = ... = 0
@@ -709,7 +716,8 @@ literature which include local, equilibrium and orthogonal ~\cite{Ade:2015ava} (
       where $X_{0, \infty} = \mathcal{U}\left\{X_{0, 1}, 1 / X_{0, 1}\right\}$,
       $X_{0, 1} = \mathcal{U}\left(0, 1\right)$, $\mathcal{U}$ refers to a uniform distribution,
       and the distribution of $\dot a_{-, 0}$ is chosen such that the expression under the
-      square root in Eq.~(\ref{eq.axionLagrangian.I}) is positive.}
+      square root in Eq.~(\ref{eq.axionLagrangian.I}) is positive.
+      Points are further filtered such that the mass of the inflaton $m_{a_-} < 0.1 M_\text{P}$.}
     \label{fig1}
   \end{figure}
 
@@ -729,7 +737,7 @@ literature which include local, equilibrium and orthogonal ~\cite{Ade:2015ava} (
   	\caption{The effect of $\alpha_2$ (left panel) and $\alpha_3$ (right panel) on non-Gaussianity for a parameter point 
 	taken from Fig.~(\ref{fig1}) which is consistent with 
 	Planck data and has the  largest non-Gaussianity among the set of parameter points 
-  in Fig.~(\ref{fig1}). Specifically, here $f = 0.429 M_\text{P}$, $a_{-, 0} = 0.233 M_\text{P}$, $\dot a_{-, 0} = -0.118 M_\text{P}^2$, $m = 6$, ${\cal{G}}_1 = {\cal{G}}_2 = {\cal{G}}_3 = 0$, ${\cal{G}}_4 = 1$, ${\cal{G}}_5 = -1.53$, ${\cal{G}}_6 = 563$, $\alpha_1 = 1207$, $\tilde \beta = 0.802$, $T = M_\text{P}^4$. One
+  in Fig.~(\ref{fig1}). Specifically, here $f = 0.429 M_\text{P}$, $a_{-, 0} = 0.233 M_\text{P}$, $\dot a_{-, 0} = -0.118 M_\text{P}^2$, $m = 6$, ${\cal{G}}_1 = {\cal{G}}_2 = {\cal{G}}_3 = 0$, ${\cal{G}}_4 = 1$, ${\cal{G}}_5 = -1.53$, ${\cal{G}}_6 = 563$, $\alpha_1 = 1207$, $\tilde \beta = 0.802$, $T = 10^{-12} M_\text{P}^4$. One
 	finds that
 	 the effect is not sufficient to obtain a significantly larger value of $f_\text{NL}$.}
   	\label{fig3}
@@ -787,8 +795,21 @@ Numerical simulations performed consist of two parts: a large $0.5 \times 10^6$ 
       Right panel: The same as the left panel except that the plot is of $f / M_{\rm P}$ as a
       function of $r$.
       We note that the plots show that there are a large number of parameter points where
-      $f / M_{\rm P} < 1$ consistent with all the experimental data.}
+      $f / M_{\rm P} < 1$ consistent with all the experimental data. Also note there are
+      experimentally consistent points with $f/M_{\rm P} \in \left[0.1, 1\right]$.}
     \label{fig4}
+  \end{figure}
+
+  \begin{figure}
+    \centering
+    \includegraphics[width=1.0\textwidth]{figs/fig5.pdf}
+    \caption{
+      Left panel: A histogram of the values of Hubble parameter at horizon exit for the same
+      data set in Fig.~(\ref{fig1}) for points that are consistent (green) and not consistent (red)
+      with experimental constraints on $r$ and $n_s$.
+      Right panel: The same as the left panel except the histogram of the inflaton $a_-$ mass is
+      shown instead.}
+    \label{fig5}
   \end{figure}
 
   The most recent analyses of non-Gaussianity based on Planck data are given in ~\cite{Ade:2015ava}.
@@ -802,12 +823,16 @@ Numerical simulations performed consist of two parts: a large $0.5 \times 10^6$ 
   $N_{\rm pivot}$. In either case one cannot draw any significant conclusion regarding the dependence of these parameters
   on the number of e-foldings as long as one is in the $N_{\rm pivot}$ range of $[50,60]$.
 
-  Finally in Fig.(\ref{fig4}) we exhibit that the analysis contains a significant part of the parameter space where
+  Then, in Fig.(\ref{fig4}) we exhibit that the analysis contains a significant part of the parameter space where
   inflation consistent with the desired number of e-foldings in the range $[50,60]$ and $n_s$ and $r$ consistent
   with Planck data can be gotten in the axion inflation model with $f/M_{\rm P} <1$. Thus the left panel
   of Fig. (\ref{fig4}) exhibits $f/M_{\rm P}$ as a function of $n_s$ in the range allowed by the Planck data constraint of Eq.(\ref{data})
   and the right panel of Fig. (\ref{fig4}) gives $f/M_{\rm P}$ as a function of $r$
   containing the range in $r$ consistent with the Planck data constraint of Eq.(\ref{data}).
+
+  Finally, we demonstrate in Fig.(\ref{fig5}) that both the Hubble parameter at horizon exit, and
+  mass of the inflaton $a_-$ are much smaller than $M_\text{P}$, which are necessary and sufficient
+  conditions for the slow-roll approximation to hold.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusion\label{sec7}}
