@@ -431,7 +431,7 @@ Naively, it appears there are three solutions for $F_k$. However, as exhibited i
   GUT scale. These $2m-1$ linear combinations of axion fields are invariant under the $U(1)$ global symmetry. The remaining one 
   linear combination of axion fields corresponds to the pseudo-Nambu-Goldstone bosons (pNGB)  and is massless. On including $W_{sb}$ in
    spontaneous breaking, the pNGB also gains a mass. However, this mass is much smaller than those of the other $2m-1$ axions 
-   because $|W_{sb}| << |W_s|$. In the analysis of this paper there is just one pair of axion field so we have only $a_+$ and $a_-$ 
+   because $|W_{sb}| << |W_s|$. In the analysis of this paper there is just one pair of axion fields so we have only $a_+$ and $a_-$
    where $a_+$ is the axion field invariant under the $U(1)$ global symmetry and $a_-$ is the field which is the pNGB.  
    In  \cite{Nath:2017ihp} it was shown that   $a_+$ rolls an order of magnitude or more  faster than $a_-$ as shown by blue lines (fast roll) vs red lines (slow roll) in Fig.1 and Fig.2 of  \cite{Nath:2017ihp}.  This phenomenon also holds for the current analysis presented here.
 
@@ -694,7 +694,7 @@ literature which include local, equilibrium and orthogonal ~\cite{Ade:2015ava} (
     \caption{Left panel: A plot of the ratio $r$ of the tensor to scalar power spectrum vs the
       scalar spectral index $n_s$ for the two field DBI model.
       The blue region enclosed by the blue line is the one allowed by experiment in the 2$\sigma$
-      range. $89\%$ of the simulated points are consistent with Planck constraints as shown by green
+      range. $85\%$ of the simulated points are consistent with Planck constraints as shown by green
       points while the red points lie outside the 68\% CL contour.
           Right panel: A plot of non-Gaussianity parameter $f^{equil}_{NL}$ as
       a function of $\alpha_1$ for the same data set as in the left plot. As in the left panel
@@ -737,7 +737,7 @@ literature which include local, equilibrium and orthogonal ~\cite{Ade:2015ava} (
   	\caption{The effect of $\alpha_2$ (left panel) and $\alpha_3$ (right panel) on non-Gaussianity for a parameter point 
 	taken from Fig.~(\ref{fig1}) which is consistent with 
 	Planck data and has the  largest non-Gaussianity among the set of parameter points 
-  in Fig.~(\ref{fig1}). Specifically, here $f = 0.429 M_\text{P}$, $a_{-, 0} = 0.233 M_\text{P}$, $\dot a_{-, 0} = -0.118 M_\text{P}^2$, $m = 6$, ${\cal{G}}_1 = {\cal{G}}_2 = {\cal{G}}_3 = 0$, ${\cal{G}}_4 = 1$, ${\cal{G}}_5 = -1.53$, ${\cal{G}}_6 = 563$, $\alpha_1 = 1207$, $\tilde \beta = 0.802$, $T = 10^{-12} M_\text{P}^4$. One
+in Fig.~(\ref{fig1}). Specifically, here $f = 0.429 M_\text{P}$, $a_{-, 0} = 0.233 M_\text{P}$, $\dot a_{-, 0} = -0.118 \sqrt{T}$, $m = 6$, ${\cal{G}}_1 = {\cal{G}}_2 = {\cal{G}}_3 = 0$, ${\cal{G}}_4 = 1$, ${\cal{G}}_5 = -1.53$, ${\cal{G}}_6 = 563$, $\alpha_1 = 1207$, $\tilde \beta = 0.802$, $T = 10^{-12} M_\text{P}^4$. One
 	finds that
 	 the effect is not sufficient to obtain a significantly larger value of $f_\text{NL}$.}
   	\label{fig3}
@@ -748,7 +748,7 @@ Numerical simulations performed consist of two parts: a large $0.5 \times 10^6$ 
   and one may write the end of inflation constraint as 
 
   \begin{equation}
-    \ddot{a} = a H^2(1 + \frac{\dot H}{H^2}) = 0.
+    \ddot{a} = a H^2 \left(1 + \frac{\dot H}{H^2} \right) = 0.
   \end{equation}
   An analytic expression similar to Eq.~(\ref{eq.axionLagrangian.II}), however,  cannot be derived  for  non-zero $\alpha_2$ and $\alpha_3$. In this case,  equations for the auxiliary fields $F_k$ are  solved numerically,  and the Lagrangian in terms of $\phi$ (Eq.~(\ref{Lag.23})) is
   also evaluated numerically for each set of values for ($a_-$, $\dot a_-$).  
@@ -794,8 +794,7 @@ Numerical simulations performed consist of two parts: a large $0.5 \times 10^6$ 
       Fig.~(\ref{fig1}).
       Right panel: The same as the left panel except that the plot is of $f / M_{\rm P}$ as a
       function of $r$.
-      We note that the plots show that there are a large number of parameter points where
-      $f / M_{\rm P} < 1$ consistent with all the experimental data. Also note there are
+      We note that there are
       experimentally consistent points with $f/M_{\rm P} \in \left[0.1, 1\right]$.}
     \label{fig4}
   \end{figure}
@@ -805,7 +804,7 @@ Numerical simulations performed consist of two parts: a large $0.5 \times 10^6$ 
     \includegraphics[width=1.0\textwidth]{figs/fig5.pdf}
     \caption{
       Left panel: A histogram of the values of Hubble parameter at horizon exit for the same
-      data set in Fig.~(\ref{fig1}) for points that are consistent (green) and not consistent (red)
+      data set as in Fig.~(\ref{fig1}) for points that are consistent (green) and not consistent (red)
       with experimental constraints on $r$ and $n_s$.
       Right panel: The same as the left panel except the histogram of the inflaton $a_-$ mass is
       shown instead.}
